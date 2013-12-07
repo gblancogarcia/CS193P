@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>B61A2B69-F04A-414C-B405-FE5321DBC01F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>CS193P</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>6E0DE7D1-A89A-4CAB-A79E-53E164EC1C59</key>
+		<string>https://github.com/gblancogarcia/CS193P.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>CS193P Fall 2013/CS193P.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>6E0DE7D1-A89A-4CAB-A79E-53E164EC1C59</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/gblancogarcia/CS193P.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>6E0DE7D1-A89A-4CAB-A79E-53E164EC1C59</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>6E0DE7D1-A89A-4CAB-A79E-53E164EC1C59</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CS193P</string>
+		</dict>
+	</array>
+</dict>
+</plist>
