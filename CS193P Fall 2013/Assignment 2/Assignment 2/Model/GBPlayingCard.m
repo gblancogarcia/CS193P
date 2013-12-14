@@ -1,6 +1,14 @@
 //
 //  PlayingCard.m
-//  Assignment 1
+//  Assignment 2
+//
+//  Created by Gerardo Blanco García on 07/12/13.
+//  Copyright (c) 2013 Gerardo Blanco García. All rights reserved.
+//
+
+//
+//  PlayingCard.m
+//  Assignment 2
 //
 //  Created by Gerardo Blanco García on 07/12/13.
 //  Copyright (c) 2013 Gerardo Blanco García. All rights reserved.
@@ -68,6 +76,22 @@ NSString * const GBPlayingCardSpade = @"♣︎";
     }
     
     return color;
+}
+
+- (int)match:(NSArray *)otherCards
+{
+    int score = 0;
+    
+    if ([otherCards count] == 1) {
+        GBPlayingCard *otherCard = [otherCards firstObject];
+        if (self.rank == otherCard.rank) {
+            score = 4;
+        } else if ([self.suit isEqualToString:otherCard.suit]) {
+            score = 1;
+        }
+    }
+    
+    return score;
 }
 
 @end

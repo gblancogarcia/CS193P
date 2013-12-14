@@ -4,4 +4,7 @@
    <FileRef
       location = "group:Assignment 1/Assignment 1.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:Assignment 2/Assignment 2.xcodeproj">
+   </FileRef>
 </Workspace>

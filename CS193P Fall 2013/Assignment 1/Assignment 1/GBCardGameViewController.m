@@ -6,12 +6,12 @@
 //  Copyright (c) 2013 Gerardo Blanco García. All rights reserved.
 //
 
-#import "GBViewController.h"
+#import "GBCardGameViewController.h"
 
 #import "GBDeck.h"
 #import "GBPlayingCardDeck.h"
 
-@interface GBViewController ()
+@interface GBCardGameViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *flipsLabel;
 
@@ -21,7 +21,7 @@
 
 @end
 
-@implementation GBViewController
+@implementation GBCardGameViewController
 
 - (void)setFlipCount:(int)flipCount
 {
@@ -57,6 +57,7 @@
             UIImage *cardImage = [UIImage imageNamed:@"cardfront"];
             [sender setBackgroundImage:cardImage forState:UIControlStateNormal];
             [sender setTitle:card.contents forState:UIControlStateNormal];
+            [sender setTitleColor:card.color forState:UIControlStateNormal];
             self.flipCount++;
         }
     }

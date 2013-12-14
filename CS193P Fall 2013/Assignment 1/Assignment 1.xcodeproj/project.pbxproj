@@ -14,7 +14,7 @@
 		43730B341842153E004C3241 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 43730B331842153E004C3241 /* main.m */; };
 		43730B381842153E004C3241 /* GBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 43730B371842153E004C3241 /* GBAppDelegate.m */; };
 		43730B3B1842153E004C3241 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43730B391842153E004C3241 /* Main.storyboard */; };
-		43730B3E1842153E004C3241 /* GBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43730B3D1842153E004C3241 /* GBViewController.m */; };
+		43730B3E1842153E004C3241 /* GBCardGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43730B3D1842153E004C3241 /* GBCardGameViewController.m */; };
 		43730B401842153E004C3241 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43730B3F1842153E004C3241 /* Images.xcassets */; };
 		43730B471842153E004C3241 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43730B461842153E004C3241 /* XCTest.framework */; };
 		43730B481842153E004C3241 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43730B271842153E004C3241 /* Foundation.framework */; };
@@ -49,8 +49,8 @@
 		43730B361842153E004C3241 /* GBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBAppDelegate.h; sourceTree = "<group>"; };
 		43730B371842153E004C3241 /* GBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GBAppDelegate.m; sourceTree = "<group>"; };
 		43730B3A1842153E004C3241 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		43730B3C1842153E004C3241 /* GBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBViewController.h; sourceTree = "<group>"; };
-		43730B3D1842153E004C3241 /* GBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GBViewController.m; sourceTree = "<group>"; };
+		43730B3C1842153E004C3241 /* GBCardGameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBCardGameViewController.h; sourceTree = "<group>"; };
+		43730B3D1842153E004C3241 /* GBCardGameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GBCardGameViewController.m; sourceTree = "<group>"; };
 		43730B3F1842153E004C3241 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		43730B451842153E004C3241 /* Assignment 1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Assignment 1Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43730B461842153E004C3241 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -124,11 +124,11 @@
 		43730B2D1842153E004C3241 /* Assignment 1 */ = {
 			isa = PBXGroup;
 			children = (
-				43F2E77918536950003BF743 /* Model */,
-				43730B3C1842153E004C3241 /* GBViewController.h */,
-				43730B3D1842153E004C3241 /* GBViewController.m */,
+				43730B3C1842153E004C3241 /* GBCardGameViewController.h */,
+				43730B3D1842153E004C3241 /* GBCardGameViewController.m */,
 				43730B3F1842153E004C3241 /* Images.xcassets */,
 				43730B391842153E004C3241 /* Main.storyboard */,
+				43F2E77918536950003BF743 /* Model */,
 				43730B2E1842153E004C3241 /* Supporting Files */,
 			);
 			path = "Assignment 1";
@@ -280,7 +280,7 @@
 			files = (
 				43730B341842153E004C3241 /* main.m in Sources */,
 				43F2E7981853781E003BF743 /* GBDeck.m in Sources */,
-				43730B3E1842153E004C3241 /* GBViewController.m in Sources */,
+				43730B3E1842153E004C3241 /* GBCardGameViewController.m in Sources */,
 				43F2E79A1853781E003BF743 /* GBPlayingCardDeck.m in Sources */,
 				43F2E7971853781E003BF743 /* GBCard.m in Sources */,
 				43730B381842153E004C3241 /* GBAppDelegate.m in Sources */,
