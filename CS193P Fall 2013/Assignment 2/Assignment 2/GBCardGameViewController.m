@@ -18,11 +18,25 @@
 
 @property (nonatomic, strong) GBCardMatchingGame *game;
 
+@property (nonatomic) int flipCount;
+
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *resultLabel;
+
+@property (weak, nonatomic) IBOutlet UISegmentedControl *modeSegmentedControl;
 
 @end
 
 @implementation GBCardGameViewController
+
+- (void)viewDidLoad
+{
+    [self.modeSegmentedControl setTintColor:[UIColor clearColor]];
+    [self.modeSegmentedControl setTintColor:self.view.tintColor];
+    
+    self.resultLabel.text = @"";
+}
 
 - (GBDeck *)createDeck
 {
@@ -34,6 +48,7 @@
     if (!_game) {
         _game = [[GBCardMatchingGame alloc] initWithCardCount:[self.cardButtons count]
                                                     usingDeck:[self createDeck]];
+        _game.numberOfMatchingCards = [self numberOfMatchingCards];
     }
     
     return _game;
@@ -43,11 +58,34 @@
 {
     NSUInteger cardIndex = [self.cardButtons indexOfObject:sender];
     [self.game chooseCardAtIndex:cardIndex];
+    self.flipCount++;
+    [self updateUI];
+}
+
+- (IBAction)changeModeSelector:(UISegmentedControl *)sender
+{
+    self.game.numberOfMatchingCards = [self numberOfMatchingCards];
+}
+
+- (NSUInteger) numberOfMatchingCards
+{
+    return [[self.modeSegmentedControl titleForSegmentAtIndex:self.modeSegmentedControl.selectedSegmentIndex] integerValue];
+}
+
+- (IBAction)dealButtonPressed:(id)sender {
+    
+    self.game = nil;
+    self.modeSegmentedControl.enabled = YES;
+    self.flipCount = 0;
     [self updateUI];
 }
 
 - (void)updateUI
 {
+    if (self.flipCount > 0) {
+        self.modeSegmentedControl.enabled = NO;
+    }
+    
     for (UIButton *cardButton in self.cardButtons) {
         NSUInteger cardIndex = [self.cardButtons indexOfObject:cardButton];
         GBCard *card = [self.game cardAtIndex:cardIndex];
@@ -59,6 +97,7 @@
     }
     
     self.scoreLabel.text = [NSString stringWithFormat:@"Score: %d", self.game.score];
+    self.resultLabel.text = self.game.result;
 }
 
 - (NSString *)titleForCard:(GBCard *)card

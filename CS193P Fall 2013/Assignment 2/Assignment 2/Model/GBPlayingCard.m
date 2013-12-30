@@ -6,20 +6,12 @@
 //  Copyright (c) 2013 Gerardo Blanco García. All rights reserved.
 //
 
-//
-//  PlayingCard.m
-//  Assignment 2
-//
-//  Created by Gerardo Blanco García on 07/12/13.
-//  Copyright (c) 2013 Gerardo Blanco García. All rights reserved.
-//
-
 #import "GBPlayingCard.h"
 
-NSString * const GBPlayingCardHeart = @"♥︎";
-NSString * const GBPlayingCardDiamond = @"♦︎";
-NSString * const GBPlayingCardClub = @"♠︎";
-NSString * const GBPlayingCardSpade = @"♣︎";
+NSString * const GBPlayingCardHeart = @"♥️";
+NSString * const GBPlayingCardDiamond = @"♦️";
+NSString * const GBPlayingCardClub = @"♠️";
+NSString * const GBPlayingCardSpade = @"♣️";
 
 @implementation GBPlayingCard
 
@@ -69,7 +61,7 @@ NSString * const GBPlayingCardSpade = @"♣︎";
 {
     UIColor *color = nil;
     
-    if ((self.suit == GBPlayingCardHeart) || (self.suit == GBPlayingCardHeart)) {
+    if ((self.suit == GBPlayingCardHeart) || (self.suit == GBPlayingCardDiamond)) {
         color = [UIColor redColor];
     } else {
         color = [UIColor blackColor];
@@ -81,14 +73,23 @@ NSString * const GBPlayingCardSpade = @"♣︎";
 - (int)match:(NSArray *)otherCards
 {
     int score = 0;
+    int numberOfOtherCards = [otherCards count];
     
-    if ([otherCards count] == 1) {
-        GBPlayingCard *otherCard = [otherCards firstObject];
-        if (self.rank == otherCard.rank) {
-            score = 4;
-        } else if ([self.suit isEqualToString:otherCard.suit]) {
-            score = 1;
+    if (numberOfOtherCards) {
+        for (GBCard *card in otherCards) {
+            if ([card isKindOfClass:[GBPlayingCard class]]) {
+                GBPlayingCard *otherCard = (GBPlayingCard *)card;
+                if ([self.suit isEqualToString:otherCard.suit]) {
+                    score += 1;
+                } else if (self.rank == otherCard.rank) {
+                    score += 4;
+                }
+            }
         }
+    }
+    
+    if (numberOfOtherCards > 1) {
+        score += [[otherCards firstObject] match:[otherCards subarrayWithRange:NSMakeRange(1, numberOfOtherCards - 1)]];
     }
     
     return score;

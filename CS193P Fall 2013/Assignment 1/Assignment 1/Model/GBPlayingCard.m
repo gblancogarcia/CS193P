@@ -8,10 +8,10 @@
 
 #import "GBPlayingCard.h"
 
-NSString * const GBPlayingCardHeart = @"♥︎";
-NSString * const GBPlayingCardDiamond = @"♦︎";
-NSString * const GBPlayingCardClub = @"♠︎";
-NSString * const GBPlayingCardSpade = @"♣︎";
+NSString * const GBPlayingCardHeart = @"♥️";
+NSString * const GBPlayingCardDiamond = @"♦️";
+NSString * const GBPlayingCardClub = @"♠️";
+NSString * const GBPlayingCardSpade = @"♣️";
 
 @implementation GBPlayingCard
 
@@ -61,7 +61,7 @@ NSString * const GBPlayingCardSpade = @"♣︎";
 {
     UIColor *color = nil;
     
-    if ((self.suit == GBPlayingCardHeart) || (self.suit == GBPlayingCardHeart)) {
+    if ((self.suit == GBPlayingCardHeart) || (self.suit == GBPlayingCardDiamond)) {
         color = [UIColor redColor];
     } else {
         color = [UIColor blackColor];

@@ -12,13 +12,17 @@
 
 @interface GBCardMatchingGame : NSObject
 
+@property (nonatomic, readonly) NSInteger score;
+
+@property (nonatomic, readonly) NSString *result;
+
+@property (nonatomic) NSUInteger numberOfMatchingCards;
+
 // Designated initializer.
 - (instancetype)initWithCardCount:(NSUInteger)count usingDeck:(GBDeck *)deck;
 
 - (void)chooseCardAtIndex:(NSUInteger)index;
 
 - (GBCard *)cardAtIndex:(NSUInteger)index;
-
-@property (nonatomic, readonly) NSInteger score;
 
 @end
